@@ -1,0 +1,20 @@
+# MMDP Lab Exam 2 .gitignore
+
+# Bundles & raw archives
+bundle_workspace/
+extracted_bundle/
+bundle_check/
+*.zip
+
+# Python & Notebook cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Course materials in parent subject folder
+*.pdf
+ASR implemetation/
+LAB1/
+PYQ/
+whisper-asr-api/
+input_file_*.png

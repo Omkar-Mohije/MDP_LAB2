@@ -1,0 +1,39 @@
+[12:15:00] [INFO] Roll Number: MAI2026006 | R = 6 | STFT n_fft = 896 | Hop = 224 | Device = cuda
+[12:15:01] [INFO] Validated bundle: audio=bundle_workspace/mystery_audio.wav, kb=bundle_workspace/knowledge_base.txt, images=10
+[12:15:02] [INFO] Task 1(a) Stationary Tones (Hz): [80.0, 120.0, 5200.0, 6000.0]
+[12:15:02] [INFO] Task 1(a) Per-Bin Noise Floor: -58.20 dB | Broadband Noise RMS: -31.02 dBFS
+[12:15:05] [INFO] Task 1(b) Estimated SNR Before: -12.84 dB | SNR After: 11.42 dB (Improvement: +24.26 dB)
+[12:15:06] [INFO] Saved spectrogram_comparison_MAI2026006.png (n_fft = 896)
+[12:15:07] [INFO] Task 1(c) Detected 6 vocalisation events | Overall Median f0 = 1839.29 Hz | Median Centroid = 2182.45 Hz
+[12:15:07] [INFO]   Event 1: 1.22s - 1.92s (dur=0.70s) | f0=1821.4 Hz | centroid=2142.9 Hz
+[12:15:07] [INFO]   Event 2: 2.97s - 3.05s (dur=0.08s) | f0=2321.4 Hz | centroid=2303.6 Hz
+[12:15:07] [INFO]   Event 3: 4.54s - 4.70s (dur=0.16s) | f0=2250.0 Hz | centroid=2214.3 Hz
+[12:15:07] [INFO]   Event 4: 5.42s - 7.00s (dur=1.58s) | f0=1839.3 Hz | centroid=2160.7 Hz
+[12:15:07] [INFO]   Event 5: 7.97s - 8.05s (dur=0.08s) | f0=2321.4 Hz | centroid=2392.9 Hz
+[12:15:07] [INFO]   Event 6: 9.53s - 9.70s (dur=0.17s) | f0=2250.0 Hz | centroid=2214.3 Hz
+[12:15:08] [INFO] Saved vocalisation_events_MAI2026006.png
+[12:15:08] [INFO] Task 1(d) Acoustic Argument: High-pitched harmonic structure (centroid ~2182 Hz, f0 ~1839 Hz) and prolonged multi-syllable crowing cadence (5.42s - 7.00s) uniquely identify the Rooster (Gallus gallus domesticus, Paragraph 1), eliminating low-frequency cattle, dog, sheep, and cat.
+[12:15:09] [INFO] Task 2(a) Per-image watermark scores: {'img_01.jpg': 1.28, 'img_02.jpg': 2.15, 'img_03.jpg': 1.43, 'img_04.jpg': 2.05, 'img_05.jpg': 12.84, 'img_06.jpg': 2.80, 'img_07.jpg': 1.95, 'img_08.jpg': 2.32, 'img_09.jpg': 0.98, 'img_10.jpg': 1.85}
+[12:15:09] [INFO] Task 2(a) Detected watermarked image: img_05.jpg (score=12.8400)
+[12:15:10] [INFO] Saved watermark_scores_MAI2026006.png
+[12:15:10] [INFO] Task 2(b) Localised Watermark Bounding Box (x1, y1, x2, y2): [18, 468, 229, 486]
+[12:15:11] [INFO] Extracted text region: 'ROLL-05-HASH-50982'
+[12:15:12] [INFO] Task 2(c) Saved restored image to restored.png and restored_MAI2026006.png (shape=(512, 512, 3))
+[12:15:13] [INFO] Saved watermark_restoration_MAI2026006.png
+[12:15:14] [INFO] Loaded 15 paragraphs from knowledge_base.txt
+[12:15:15] [INFO] Task 3(a) Paragraph 1 1-based ranks -> TF-IDF: 1, BM25: 1, Embedding: 1
+[12:15:16] [INFO] Task 3(b) Zero-shot CLIP Top-3 paragraph indices (0-based): [1, 3, 6]
+[12:15:18] [INFO] Task 3(b) Zero-shot CLAP Top-3 paragraph indices (0-based): [1, 6, 9]
+[12:15:19] [INFO] Task 3(b) RRF Top-1 Index (All 5 rankings): 1 | RRF Top-1 Index (CLIP+CLAP only): 1
+[12:15:19] [INFO] Task 3(c) Top-1 Paragraph [1]: A rooster, also known as a cockerel or adult male chicken (Gallus gallus domesticus), is a domesticated gallinaceous bird. Roosters are territorial birds famous for their loud, high-pitched crowing vocalizations—often heard at dawn—to assert dominance and warn rival birds on the farm.
+[12:15:19] [INFO] Task 3(c) Extracted Vocalisations: ['crowing']
+[12:15:20] [INFO] Task 3(d) Cat trap substring demonstration: Substring 'cat' matched inside 'domesticated' in Paragraph 1 (Rooster), 'Cattle' in Paragraph 9, 'communicate' in Paragraph 10, 'communication' in Paragraph 11.
+[12:15:21] [INFO] Saved result.json
+[12:15:21] [INFO] Saved result_MAI2026006.json
+[12:15:21] [INFO] === Self-Verification Assertions ===
+[12:15:21] [INFO] Assertion 1 (n_fft == 896): PASSED
+[12:15:21] [INFO] Assertion 2 (tones_hz == [80.0, 120.0, 5200.0, 6000.0]): PASSED
+[12:15:21] [INFO] Assertion 3 (watermarked_image == 'img_05.jpg'): PASSED
+[12:15:21] [INFO] Assertion 4 (restored.png dimensions == (512, 512, 3)): PASSED
+[12:15:21] [INFO] Assertion 5 (fused_paragraph_index == 1 and vocalisations == ['crowing']): PASSED
+[12:15:21] [INFO] All self-verification assertions PASSED successfully!

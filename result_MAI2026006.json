@@ -1,0 +1,28 @@
+{
+  "roll": "MAI2026006",
+  "n_fft": 896,
+  "tones_hz": [
+    80.0,
+    120.0,
+    5200.0,
+    6000.0
+  ],
+  "num_events": 6,
+  "median_f0_hz": 1839.29,
+  "watermarked_image": "img_05.jpg",
+  "watermark_bbox": [
+    18,
+    468,
+    229,
+    486
+  ],
+  "paragraph_ranks": {
+    "tfidf": 1,
+    "bm25": 1,
+    "embedding": 1
+  },
+  "fused_paragraph_index": 1,
+  "vocalisations": [
+    "crowing"
+  ]
+}
